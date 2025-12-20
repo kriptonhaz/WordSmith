@@ -4,6 +4,7 @@ A Chrome extension that helps you rephrase sentences using AI-powered APIs. Tran
 
 ## Features
 
+- **Smart Text Selection**: Select text in any input field or textarea to trigger a balloon popup with tone options.
 - **Multiple Rephrase Modes**: Choose from 8 different writing styles:
 
   - Formal: Professional, business tone
@@ -15,6 +16,7 @@ A Chrome extension that helps you rephrase sentences using AI-powered APIs. Tran
   - Simplified: Easy to understand
   - Academic: Objective and analytical
 
+- **Platform Compatibility**: Tailored support for platforms like Discord, WhatsApp Web, LinkedIn, and Slack.
 - **Multiple API Providers**: Supports various AI services:
 
   - Z.AI (default)
@@ -25,7 +27,7 @@ A Chrome extension that helps you rephrase sentences using AI-powered APIs. Tran
   - OpenRouter
   - RouteWay
 
-- **Easy to Use**: Simple interface with copy-to-clipboard functionality
+- **Easy to Use**: Seamless integration into your browsing experience with direct text replacement or clipboard fallback.
 
 ## Installation
 
@@ -33,9 +35,20 @@ A Chrome extension that helps you rephrase sentences using AI-powered APIs. Tran
 2. Open Chrome and go to `chrome://extensions/`
 3. Enable "Developer mode" in the top right
 4. Click "Load unpacked" and select the extension folder
-5. The BePhrase icon will appear in your Chrome toolbar
+5. The WordSmith icon will appear in your Chrome toolbar
 
 ## Usage
+
+### Method 1: Popup Balloon (Recommended)
+
+1. Go to any website and type or find text in an input field, textarea, or chat box.
+2. Select the text you want to rephrase.
+3. A balloon popup will appear near your selection.
+4. Select your desired tone.
+5. Click "Smithen" to get the result.
+6. Click "Accept" to replace the text directly (or copy to clipboard on platforms like Discord).
+
+### Method 2: Extension Toolbar
 
 1. Click the WordSmith icon in your Chrome toolbar
 2. Enter the text you want to rephrase
@@ -77,14 +90,12 @@ To use your own API:
 wordsmith/
 ├── manifest.json          # Extension configuration
 ├── background.js           # Service worker for API calls
+├── content.js             # Script for text selection and balloon popup
+├── content.css            # Styling for the balloon popup
 ├── popup.html             # Extension popup interface
 ├── popup.css              # Styling for the popup
 ├── popup.js               # Popup logic and user interactions
 ├── icons/                 # Extension icons
-│   ├── icon16.png
-│   ├── icon32.png
-│   ├── icon48.png
-│   └── icon128.png
 └── README.md              # This file
 ```
 
